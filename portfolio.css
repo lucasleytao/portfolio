@@ -87,8 +87,8 @@ footer { /*elemento pai*/
 }
 
 .link {
-    display: flex; /*mostrar: flex*/
-    justify-content: flex-start; /*justificar conteúdo*/
+    display: flex;
+    justify-content: flex-start; 
 }
 
 #intro h1 {
@@ -276,7 +276,7 @@ footer { /*elemento pai*/
 
 /*Media Query / regras e estilos específicos para tamanhos de telas diferentes*/
 
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
     #portfolio .project-item {
         flex-direction: row;
         height: 50rem;
@@ -297,4 +297,5 @@ footer { /*elemento pai*/
     #portfolio .project-item:nth-child(even) {
         flex-direction: row-reverse;
     }
+    
 }
