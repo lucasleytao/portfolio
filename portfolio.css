@@ -79,7 +79,7 @@ footer { /*elemento pai*/
 /*[ Seção de introdução ]*/
 
 #intro {
-    background-image: url(../portfolio/capa4.jpg);
+    background-image: url(../portfolio/images/capa4.jpg);
     background-size: cover; /*cobrir*/
     background-position: top center;
     position: relative; /*responsividade* imagem adaptada em diferentes contextos de telas*/
