@@ -1,53 +1,243 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prática HTML</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- <link
-        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap"
-        rel="stylesheet" /> -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Lucas — Frontend Developer focado em React e UI moderno. Portfólio de projetos e habilidades." />
+  <title>Portfólio | Lucas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <!-- navegacao -->
-    <header class="nav-header">
-        <div class="container nav-inner">
-            <span class="nav-logo">lucas<span class="accent">.</span>dev</span>
-            <nav aria-label="navigate">
-                <ul class="nav-links">
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projetos">Projetos</a></li>
-                    <li><a href="#contato" class="nav-cta">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <main id="conteudo principal">
-        <!-- principal -->
-        <section class="hero">
-            <h1>Seção 1</h1>
-        </section>
-        <section class="hero">
-            <h1>Seção 2</h1>
-        </section>
-        <section class="hero">
-            <h1>Seção 3</h1>
-        </section>
-    </main>
+  <!-- NAVEGAÇÃO -->
+  <header class="nav-header">
+    <div class="container nav-inner">
+      <span class="nav-logo">lucas<span class="accent">.</span>dev</span>
+      <nav aria-label="Navegação principal">
+        <ul class="nav-links">
+          <li><a href="./index.html">Top</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#contato" class="nav-cta">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <!-- footer -->
-    <footer class="footer">
-        <div>
-            <p>Copyright &copy; 2026. Lucas Leitão</p><!--links, copyright, contatos-->
+  <main id="conteudo-principal">
+
+    <!-- HERO -->
+    <section class="hero" id="inicio" aria-labelledby="hero-titulo">
+      <div class="container hero-inner">
+        <div class="hero-eyebrow">
+          <span class="status-dot" aria-hidden="true"></span>
+          Disponível para oportunidades
         </div>
-    </footer>
+        <h1 class="hero-title" id="hero-titulo">
+          Transformo <span class="accent">interfaces</span><br />
+          em experiências.
+        </h1>
+
+        <pre class="hero-code" aria-label="Código de apresentação">
+          <code>const lucas = {
+                role: <span class="code-string">"Frontend Developer"</span>,
+                stack: [<span class="code-string">"HTML"</span>, <span class="code-string">"CSS"</span>, <span class="code-string">"JavaScript"</span>, <span class="code-string">"React"</span>],
+                open_to_work: <span class="code-bool">true</span>
+                };
+          </code>
+        </pre>
+
+        <div class="hero-actions">
+          <a href="#projetos" class="btn btn-primary">Ver projetos</a>
+          <a href="#contato" class="btn btn-ghost">Fale comigo</a>
+        </div>
+      </div>
+      <div class="hero-glow" aria-hidden="true"></div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="section" id="sobre" aria-labelledby="titulo-sobre">
+      <div class="container sobre-grid">
+        <div class="sobre-label section-label" aria-hidden="true">Sobre mim</div>
+        <div class="sobre-content">
+          <h2 class="section-title" id="titulo-sobre">Dev de dia,<br />entusiasta no resto dele.</h2>
+          <p class="sobre-text">
+            Sou formado em Análise e Desenvolvimento de Sistemas e estou desenvolvendo habilidades como Frontend
+            Engineer, com
+            foco em JavaScript
+            e React, também aprimorando Next.js e TypeScript, levando em consideração que são tecnologias importantes
+            na construção de sistemas web modernos. Como parte do meu processo de aprendizado e desenvolvimento, aplico
+            todas as práticas na construção de projetos reais,
+            que buscam solucionar problemas reais, porque acredito que a melhor forma de evoluir é colocar o
+            conhecimento em
+            prática e resolver problemas. Como desenvolvedor Frontend, busco desenvolver a cada dia uma base técnica
+            sólida,
+            comprometido com qualidade de código
+            e também com boas práticas de desenvolvimento, sempre com o objetivo de crescer e evoluir como profissional.
+          </p>
+          <p class="sobre-text">
+            Colossenses 3:23-24
+            "Tudo o que fizerem, façam de todo o coração, como para o Senhor, não para os homens, sabendo que receberão
+            do Senhor a
+            recompensa da herança, pois é a Cristo, o Senhor, a quem vocês servem."
+          </p>
+          <div class="sobre-stats">
+            <div class="stat">
+              <span class="stat-num">Análise e Desenvolvimento de Sistemas</span> |
+              <span class="stat-label">Formação técnica 2024.2</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">React / NextJs</span> |
+              <span class="stat-label">Stack principal</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section section-alt" id="skills" aria-labelledby="titulo-skills">
+      <div class="container">
+        <div class="section-label" aria-hidden="true">Habilidades</div>
+        <h2 class="section-title" id="titulo-skills">O que domino.</h2>
+        <div class="skills-grid">
+
+          <article class="skill-card">
+            <div class="skill-icon" aria-hidden="true">⬡</div>
+            <h3>Frontend</h3>
+            <ul class="skill-list">
+              <li>HTML5 Semântico</li>
+              <li>CSS3</li>
+              <li>JavaScript / TypeScript</li>
+              <li>React / NextJs</li>
+            </ul>
+          </article>
+
+          <article class="skill-card skill-card--featured">
+            <div class="skill-icon" aria-hidden="true">◈</div>
+            <h3>Design & Arquitetura</h3>
+            <ul class="skill-list">
+              <li>Design Responsivo</li>
+              <li>Documentação técnica</li>
+              <li>Diagramas e Fluxogramas</li>
+              <li>Prototipagem</li>
+            </ul>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-icon" aria-hidden="true">&#9634</div>
+            <h3>Backend</h3>
+            <ul class="skill-list">
+              <li>NodeJs</li>
+            </ul>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-icon" aria-hidden="true">&#9649</div>
+            <h3>Ferramentas</h3>
+            <ul class="skill-list">
+              <li>Git & GitHub</li>
+              <li>VS Code</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJETOS -->
+    <section class="section" id="projetos" aria-labelledby="titulo-projetos">
+      <div class="container">
+        <div class="section-label" aria-hidden="true">Portfólio</div>
+        <h2 class="section-title" id="titulo-projetos">Projetos em construção.</h2>
+        <div class="projetos-grid">
+
+          <article class="projeto-card">
+            <div class="projeto-header">
+              <div class="projeto-tag">Em desenvolvimento</div>
+              <div class="projeto-links">
+                <a href="#" aria-label="Ver código no GitHub">GitHub →</a>
+              </div>
+            </div>
+            <h3 class="projeto-title">DevFlow</h3>
+            <p class="projeto-desc">Plataforma web que centraliza toda a jornada de aprendizado e desenvolvimento de um
+              estudante ou profissional de tecnologia.
+              Interface construída com React e shadcn/ui.</p>
+            <div class="projeto-stack">
+              <span>Next.js</span>
+              <span>TypeScript</span>
+              <span>shadcn/ui</span>
+            </div>
+          </article>
+
+          <article class="projeto-card">
+            <div class="projeto-header">
+              <div class="projeto-tag">Em desenvolvimento</div>
+              <div class="projeto-links">
+                <a href="#" aria-label="Ver código no GitHub">GitHub →</a>
+              </div>
+            </div>
+            <h3 class="projeto-title">iNote</h3>
+            <p class="projeto-desc">Aplicação web de controle de venda fiado. Arquitetura monolítica frontend + BaaS.
+              Stack: React + JavaScript, Vite, Bootstrap, Supabase (PostgreSQL), Vercel, React Router DOM.
+            </p>
+            <div class="projeto-stack">
+              <span>React</span>
+              <span>JavaScript</span>
+              <span>Bootstrap</span>
+            </div>
+          </article>
+
+          <article class="projeto-card projeto-card--add">
+            <div class="add-icon" aria-hidden="true">+</div>
+            <p>Mais projetos chegando.<br />Em constante construção.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="section section-alt" id="contato" aria-labelledby="titulo-contato">
+      <div class="container contato-inner">
+        <div class="section-label" aria-hidden="true">Contato</div>
+        <h2 class="section-title" id="titulo-contato">Vamos trabalhar<br />juntos?</h2>
+        <p class="contato-sub">Estou aberto a oportunidades júnior, freelas e colaborações.</p>
+        <address class="contato-actions">
+          <a href="https://wa.me/5586994545031" class="btn btn-wa" target="_blank">WhatsApp</a>
+          <div class="contato-socials">
+            <a href="https://www.linkedin.com/in/lucas-leitao-640497162/" target="_blank"
+              rel="noopener noreferrer">LinkedIn</a>
+            <span aria-hidden="true">·</span>
+            <a href="https://www.instagram.com/lucasleytao.dev/" target="_blank">Instagram</a>
+            <span aria-hidden="true">·</span>
+            <a href="https://github.com/lucasleytao" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <span aria-hidden="true">·</span>
+            <a href="mailto:lucassilvaleitao1401@gmail.com">E-mail</a>
+          </div>
+        </address>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>&copy; 2026 Lucas Leitão. Feito com HTML & CSS puro.</span>
+      <a href="#inicio" class="footer-top">Voltar ao topo ↑</a>
+    </div>
+  </footer>
+
 </body>
 
 </html>
