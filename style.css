@@ -285,6 +285,12 @@ img {
   white-space: pre;
 }
 
+.hero-code img {
+  width: 220px;
+  height: 220px;
+  border-radius: 6px 32px;
+}
+
 .code-string { color: #a8ff78; }
 .code-bool   { color: var(--pink); }
 
@@ -458,7 +464,7 @@ img {
 }
 
 .projeto-links a {
-  pointer-events: none;
+  /* pointer-events: none; */
   font-size: 0.8rem;
   color: var(--text-muted);
   transition: color var(--transition);
