@@ -1,14 +1,15 @@
-/* ============================================
-   TOKENS — fonte única da verdade do design
-   ============================================ */
+/* tokens - custom properties */
+
 :root {
   --bg:          #0A0A0F;
   --bg-alt:      #0F0F17;
   --surface:     #13131A;
   --surface-2:   #1A1A25;
   --border:      #1E1E2E;
-  --color-wa:    #25d366;
+  --hex-wa:      #43cd66;
+  --hex-tg:      #24a1de;
   --wa-hover:    #128c7e;
+  --tg-hover:    #0088cc;
 
   --text:        #E8E8F0;
   --text-muted:  #7A7A9A;
@@ -32,9 +33,8 @@
   --max-w: 1100px;
 }
 
-/* ============================================
-   RESET & BASE
-   ============================================ */
+/* reset & base  */
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -69,9 +69,8 @@ img {
   display: block;
 }
 
-/* ============================================
-   UTILITÁRIOS
-   ============================================ */
+/* utils */
+
 .container {
   width: 100%;
   max-width: var(--max-w);
@@ -109,9 +108,8 @@ img {
   margin-bottom: 48px;
 }
 
-/* ============================================
-   BOTÕES
-   ============================================ */
+/* botões */
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -137,8 +135,12 @@ img {
 }
 
 .btn-wa {
-  /* background-color: var(--accent); */
-  background-color: var(--wa-hover);
+  background-color: var(--hex-wa);
+  color: #fff;
+}
+
+.btn-tg {
+  background-color: var(--hex-tg);
   color: #fff;
 }
 
@@ -146,6 +148,17 @@ img {
   background-color: var(--wa-hover);
   transform: translateY(-1px);
   box-shadow: 0 8px 24px var(--accent-glow);
+}
+
+.btn-tg:hover {
+  background-color: var(--tg-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px var(--accent-glow);
+}
+
+.message {
+  display: flex;
+  gap: 16px;
 }
 
 .btn-ghost {
@@ -159,9 +172,8 @@ img {
   color: var(--accent);
 }
 
-/* ============================================
-   HEADER / NAV
-   ============================================ */
+/* header / nav */
+
 .nav-header {
   position: fixed;
   top: 0;
@@ -219,9 +231,8 @@ img {
   color: #fff;
 }
 
-/* ============================================
-   HERO
-   ============================================ */
+/* hero */
+
 .hero {
   position: relative;
   padding-top: 160px;
@@ -286,9 +297,9 @@ img {
 }
 
 .hero-code img {
-  width: 220px;
-  height: 220px;
-  border-radius: 6px 32px;
+  width: 180px;
+  height: 180px;
+  border-radius: 9px 32px;
 }
 
 .code-string { color: #a8ff78; }
@@ -300,8 +311,8 @@ img {
   flex-wrap: wrap;
 }
 
-/* Glow de fundo do hero */
-.hero-glow {
+
+.hero-glow { /* glow de fundo do hero */
   position: absolute;
   top: 0;
   left: -10%;
@@ -312,9 +323,8 @@ img {
   z-index: 0;
 }
 
-/* ============================================
-   SOBRE
-   ============================================ */
+/* sobre */
+
 .sobre-grid {
   display: grid;
   grid-template-columns: 160px 1fr;
@@ -360,9 +370,8 @@ img {
   color: var(--text-muted);
 }
 
-/* ============================================
-   SKILLS
-   ============================================ */
+/* skills */
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -422,9 +431,8 @@ img {
   font-size: 0.75rem;
 }
 
-/* ============================================
-   PROJETOS
-   ============================================ */
+/* projetos */
+
 .projetos-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -532,9 +540,35 @@ img {
   line-height: 1.6;
 }
 
-/* ============================================
-   CONTATO
-   ============================================ */
+/* eventos */
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.event-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden; /*impede que a imagem transborde por cima da borda do card*/
+}
+
+.event-card img {
+  width: 100%;
+  aspect-ratio: 16 / 19; /* mantém a proporção padrão de fotos de eventos */
+  object-fit: cover; /*corta e ajusta a imagem sem distorcer*/
+  object-position: center;
+  display: block;
+}
+
+.event-card h3 {
+  padding: 6px;
+}
+
+/* contato */
+
 .contato-inner {
   max-width: 640px;
 }
@@ -570,9 +604,8 @@ img {
   color: var(--accent);
 }
 
-/* ============================================
-   FOOTER
-   ============================================ */
+/* footer */
+
 .footer {
   border-top: 1px solid var(--border);
   padding-block: 28px;
@@ -594,9 +627,8 @@ img {
   color: var(--accent);
 }
 
-/* ============================================
-   RESPONSIVO
-   ============================================ */
+/* responsivo */
+
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -624,7 +656,8 @@ img {
   }
 
   .skills-grid,
-  .projetos-grid {
+  .projetos-grid,
+  .events-grid {
     grid-template-columns: 1fr;
   }
 
@@ -654,16 +687,63 @@ img {
   }
 }
 
-/* ============================================
-   REDUCED MOTION
-   ============================================ */
+/* reduce motion */
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
 
   html {
     scroll-behavior: auto;
   }
+
+  .marquee-track {
+    animation: none !important;
+  }
 }
+
+/* marquee */
+
+/* .marquee {
+  width: 100%;
+  overflow: hidden;
+  background: var(--surface);
+  padding: 1rem 0;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 20s linear infinite;
+}
+
+.marquee-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-right: 2rem; Espaço entre as duas cópias
+  flex-shrink: 0;
+}
+
+.marquee img {
+  display: block;
+  height: 30px;
+  width: auto;
+}
+
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+} */
