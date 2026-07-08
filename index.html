@@ -13,6 +13,8 @@
     href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="./images/icon.png">
+  <script src="https://kit.fontawesome.com/a94cc8a8bf.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -21,9 +23,16 @@
   <header class="nav-header">
     <div class="container nav-inner">
       <span class="nav-logo">lucas<span class="accent">.</span>dev</span>
+
+      <!-- checkbox invisivel que guarda o estado -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+      <!-- label clicável > o botão "hamburguer" -->
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Alternar menu de navegação" role="button">
+      </label>
+
       <nav aria-label="Navegação principal">
-        <ul class="nav-links">
-          <li><a href="#inicio">Top</a></li>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#inicio"><i class="fa-solid fa-terminal"></i></a></li>
           <li><a href="#sobre">Sobre</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projetos">Projetos</a></li>
@@ -115,10 +124,24 @@
             <div class="skill-icon" aria-hidden="true">⬡</div>
             <h3>Frontend</h3>
             <ul class="skill-list">
-              <li>HTML5 Semântico</li>
-              <li>CSS3</li>
-              <li>JavaScript / TypeScript</li>
-              <li>React / NextJs</li>
+              <li><img src="https://skillicons.dev/icons?i=html" alt="HTML" height="20">HTML5 Semântico</li>
+              <li><img src="https://skillicons.dev/icons?i=css" alt="CSS" height="20">CSS3</li>
+              <li><img src="https://skillicons.dev/icons?i=js" alt="JavaScript" height="20">JavaScript</li>
+              <li><img src="https://skillicons.dev/icons?i=react" alt="React" height="20">React</li>
+              <li><img src="https://skillicons.dev/icons?i=bootstrap" alt="Bootstrap" height="20">Bootstrap</li>
+            </ul>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-icon" aria-hidden="true">&#9634</div>
+            <h3>Backend</h3>
+            <ul class="skill-list">
+              <li><img src="https://skillicons.dev/icons?i=nodejs" height="20" alt="nodejs logo" />NodeJs</li>
+              <li><img src="https://skillicons.dev/icons?i=js" alt="JavaScript" height="20">JavaScript</li>
+              <li><img src="https://skillicons.dev/icons?i=express" height="20" alt="express logo" />Express</li>
+              <li><img src="https://skillicons.dev/icons?i=mongodb" height="20" alt="mongodb logo" />MongoDB</li>
+              <li><img src="https://skillicons.dev/icons?i=firebase" height="20" alt="firebase logo" />Firebase</li>
+              <li><img src="https://skillicons.dev/icons?i=supabase" height="20" alt="supabase logo" />Supabase</li>
             </ul>
           </article>
 
@@ -134,57 +157,30 @@
           </article>
 
           <article class="skill-card">
-            <div class="skill-icon" aria-hidden="true">&#9634</div>
-            <h3>Backend</h3>
-            <ul class="skill-list">
-              <li>NodeJs</li>
-            </ul>
-          </article>
-
-          <article class="skill-card">
             <div class="skill-icon" aria-hidden="true">&#9649</div>
             <h3>Ferramentas</h3>
             <ul class="skill-list">
-              <li>Git & GitHub</li>
-              <li>VS Code</li>
+              <li><img src="https://skillicons.dev/icons?i=git" height="20" alt="git logo" />Git</li>
+              <li><img src="https://skillicons.dev/icons?i=github" height="20" alt="github logo" />GitHub</li>
+              <li><img src="https://skillicons.dev/icons?i=vscode" height="20" alt="vscode logo" />VS Code</li>
+            </ul>
+          </article>
+
+          <article class="skill-card skill-card--featured">
+            <div class="skill-icon" aria-hidden="true">&#128931</div>
+            <h3>Novas skills que estou desenvolvendo</h3>
+            <ul class="skill-list">
+              <li><img src="https://skillicons.dev/icons?i=aws" height="20" alt="amazonwebservices logo" />AWS</li>
+              <li><img src="https://skillicons.dev/icons?i=docker" height="20" alt="docker logo" />Docker</li>
+              <li><img src="https://skillicons.dev/icons?i=ts" alt="TypeScript" height="20">TypeScript</li>
+              <li><img src="https://skillicons.dev/icons?i=nextjs" alt="Nextjs" height="20">Next.js</li>
+              <li><img src="https://skillicons.dev/icons?i=tailwind" alt="Tailwind" height="20">Tailwind</li>
             </ul>
           </article>
 
         </div>
       </div>
     </section>
-
-    <!-- marquee  -->
-    <!-- <section class="section-marquee">
-      <div class="marquee">
-
-        <div class="marquee-track">
-
-          <div class="marquee-content">
-            <img src="https://skillicons.dev/icons?i=html" alt="HTML" height="30">
-            <img src="https://skillicons.dev/icons?i=css" alt="CSS" height="30">
-            <img src="https://skillicons.dev/icons?i=js" alt="JavaScript" height="30">
-            <img src="https://skillicons.dev/icons?i=react" alt="React" height="30">
-            <img src="https://skillicons.dev/icons?i=bootstrap" alt="Bootstrap" height="30">
-            <img src="https://skillicons.dev/icons?i=nodejs" height="30" alt="nodejs logo" />
-            <img src="https://skillicons.dev/icons?i=express" height="30" alt="express logo" />
-            <img src="https://skillicons.dev/icons?i=mongodb" height="30" alt="mongodb logo" />
-            <img src="https://skillicons.dev/icons?i=firebase" height="30" alt="firebase logo" />
-            <img src="https://skillicons.dev/icons?i=supabase" height="30" alt="supabase logo" />
-            <img src="https://skillicons.dev/icons?i=aws" height="30" alt="amazonwebservices logo" /> -->
-            <!-- <img src="https://skillicons.dev/icons?i=docker" height="30" alt="docker logo"  />
-  <img src="https://skillicons.dev/icons?i=py" height="30" alt="python logo"  /> -->
-            <!-- <img src="https://skillicons.dev/icons?i=ts" height="30" alt="typescript logo" />
-            <img src="https://skillicons.dev/icons?i=nextjs" height="30" alt="nextjs logo" />
-            <img src="https://skillicons.dev/icons?i=tailwind" height="30" alt="tailwind logo" />
-            <img src="https://skillicons.dev/icons?i=vscode" height="30" alt="vscode logo" />
-            <img src="https://skillicons.dev/icons?i=git" height="30" alt="git logo" />
-            <img src="https://skillicons.dev/icons?i=github" height="30" alt="github logo" />
-
-          </div>
-        </div>
-      </div>
-    </section> -->
 
     <!-- projetos -->
     <section class="section" id="projetos" aria-labelledby="titulo-projetos">
@@ -248,7 +244,7 @@
 
           <article class="projeto-card">
             <div class="projeto-header">
-              <div class="projeto-tag">Concluído</div>
+              <div class="projeto-tag-c">Concluído</div>
               <div class="projeto-links">
                 <a href="https://hand-crm.vercel.app/" aria-label="URL do projeto Hand-CRM" target="_blank">Visite →</a>
               </div>
@@ -325,7 +321,7 @@
   <!-- footer -->
   <footer class="footer">
     <div class="container footer-inner">
-      <span>&copy; 2026 Lucas Leitão. Feito com HTML & CSS puro.</span>
+      <span>&copy; Lucas Leitão 2026. Todos os direitos reservados. Feito com HTML & CSS puro.</span>
       <a href="#inicio" class="footer-top">Voltar ao topo ↑</a>
     </div>
   </footer>

@@ -16,8 +16,10 @@
   --text-faint:  #3A3A5A;
 
   --accent:       #6C63FF;
+  --accent-c:     #63ffcb;
   --accent-hover: #5a52e0; /* accent escurecido — hover de botões */
   --accent-dim:   rgba(108, 99, 255, 0.12);
+  --accent-dim-c: rgba(99, 255, 151, 0.12);
   --accent-glow:  rgba(108, 99, 255, 0.35);
   --pink:         #FF6584;
 
@@ -338,6 +340,7 @@ img {
 }
 
 .sobre-text {
+  /* text-align: justify; */
   color: var(--text-muted);
   font-size: 1.05rem;
   margin-bottom: 20px;
@@ -417,19 +420,21 @@ img {
 }
 
 .skill-list li {
+  display: flex;
+  gap: 8px;
   font-size: 0.875rem;
   color: var(--text-muted);
   padding-left: 14px;
   position: relative;
 }
 
-.skill-list li::before {
+/* .skill-list li::before {
   content: '—';
   position: absolute;
   left: 0;
   color: var(--text-faint);
   font-size: 0.75rem;
-}
+} */
 
 /* projetos */
 
@@ -467,6 +472,16 @@ img {
   color: var(--accent);
   background-color: var(--accent-dim);
   border: 1px solid rgba(108, 99, 255, 0.2);
+  padding: 3px 10px;
+  border-radius: 99px;
+}
+
+.projeto-tag-c {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--accent-c);
+  background-color: var(--accent-dim-c);
+  border: 1px solid rgba(99, 255, 182, 0.2);
   padding: 3px 10px;
   border-radius: 99px;
 }
@@ -627,11 +642,76 @@ img {
   color: var(--accent);
 }
 
+/* botão hamburguer */
+
+.nav-toggle-checkbox {
+  position: absolute; /* tira o elemento do fluxo normal do layout */
+  opacity: 0; /*invisivel, mas ainda existe e pode receber foco de teclado*/
+  width: 1px; /* quase sem tamanho, mas não zero, para evitar bugs de navegadores*/
+  height: 1px;
+  pointer-events: none; /*impede clique acidental diretamente nele, o foco é o label, que é visível*/
+}
+
+.nav-toggle-label {
+  display: none;
+  margin-left: auto;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--text-muted);
+  user-select: none;
+}
+
+.nav-toggle-label::before {
+  content: '\2630'; /*botão hamburguer*/
+}
+
+.nav-toggle-checkbox:checked ~ .nav-toggle-label::before {
+  content: '\2715'; /* X */
+}
+
 /* responsivo */
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+  .nav-toggle-label {
+    display: block;
+  }
+
   .nav-links {
     display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background-color: var(--bg-alt);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 24px 20px;
+  }
+
+  .nav-toggle-checkbox:checked ~ nav .nav-links { /*quando checado, busque em nav .nav-links e aplique*/
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-links li:last-child a { /*em cada item, exceto no último*/
+    border-bottom: none; /*cria linhas divisórias visuais entre os itens, sem precisar de <hr> no html*/
+  }
+
+  .nav-links a.nav-cta { /*recebe destaque a parte, pois já há um estilo de botão no desktop*/
+    margin-top: 12px;
+    text-align: center;
   }
 
   .hero {
@@ -699,51 +779,4 @@ img {
   html {
     scroll-behavior: auto;
   }
-
-  .marquee-track {
-    animation: none !important;
-  }
 }
-
-/* marquee */
-
-/* .marquee {
-  width: 100%;
-  overflow: hidden;
-  background: var(--surface);
-  padding: 1rem 0;
-}
-
-.marquee-track {
-  display: flex;
-  width: max-content;
-  animation: marquee 20s linear infinite;
-}
-
-.marquee-content {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  padding-right: 2rem; Espaço entre as duas cópias
-  flex-shrink: 0;
-}
-
-.marquee img {
-  display: block;
-  height: 30px;
-  width: auto;
-}
-
-.marquee:hover .marquee-track {
-  animation-play-state: paused;
-}
-
-@keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(-50%);
-  }
-} */
