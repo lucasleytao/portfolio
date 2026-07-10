@@ -672,6 +672,32 @@ img {
   content: '\2715'; /* X */
 }
 
+/* career */
+
+.enterprise {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.enterprise img {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  margin-right: 12px;
+}
+
+#date {
+  color: var(--text-muted);
+}
+
+.career-card {
+  display: flex;
+  font-family: var(--font-body);
+  margin-bottom: 16px;
+  font-size: 1.05rem;
+}
+
 /* responsivo */
 
 @media (max-width: 767px) {
