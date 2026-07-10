@@ -683,7 +683,7 @@ img {
 .enterprise img {
   width: 48px;
   height: 48px;
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   margin-right: 12px;
 }
 
@@ -696,6 +696,7 @@ img {
   font-family: var(--font-body);
   margin-bottom: 16px;
   font-size: 1.05rem;
+  /* border-bottom: 1px solid var(--border); */
 }
 
 /* responsivo */
