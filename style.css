@@ -6,8 +6,8 @@
   --surface:     #13131A;
   --surface-2:   #1A1A25;
   --border:      #1E1E2E;
-  --hex-wa:      #43cd66;
-  --hex-tg:      #24a1de;
+  --hex-whatsapp:#43cd66;
+  --hex-telegram:#24a1de;
   --wa-hover:    #128c7e;
   --tg-hover:    #0088cc;
 
@@ -132,29 +132,29 @@ img {
 
 .btn-primary:hover {
   background-color: var(--accent-hover);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
   box-shadow: 0 8px 24px var(--accent-glow);
 }
 
 .btn-wa {
-  background-color: var(--hex-wa);
+  background-color: var(--hex-whatsapp);
   color: #fff;
 }
 
 .btn-tg {
-  background-color: var(--hex-tg);
+  background-color: var(--hex-telegram);
   color: #fff;
 }
 
 .btn-wa:hover {
   background-color: var(--wa-hover);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
   box-shadow: 0 8px 24px var(--accent-glow);
 }
 
 .btn-tg:hover {
   background-color: var(--tg-hover);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
   box-shadow: 0 8px 24px var(--accent-glow);
 }
 
@@ -392,13 +392,13 @@ img {
 
 .skill-card:hover {
   border-color: var(--accent);
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 }
 
-.skill-card--featured {
+/* .skill-card--featured {
   border-color: rgba(108, 99, 255, 0.4);
   background: linear-gradient(135deg, var(--surface), rgba(108, 99, 255, 0.06));
-}
+} */
 
 .skill-icon {
   font-size: 1rem;
@@ -458,7 +458,7 @@ img {
 
 .projeto-card:hover {
   border-color: var(--accent);
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 }
 
 .projeto-header {
@@ -687,7 +687,7 @@ img {
   margin-right: 12px;
 }
 
-#date {
+.career-date {
   color: var(--text-muted);
 }
 
@@ -700,6 +700,15 @@ img {
 }
 
 /* responsivo */
+
+/* breakpoint intermediario para tablet */
+@media (max-width: 1024px) {
+  .skills-grid,
+  .projetos-grid,
+  .events-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
 @media (max-width: 767px) {
   .nav-toggle-label {
