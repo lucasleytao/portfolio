@@ -130,6 +130,11 @@ img {
   color: #fff;
 }
 
+#vitae {
+  background-color: #ec6363;
+  color: #fff;
+}
+
 .btn-primary:hover {
   background-color: var(--accent-hover);
   transform: translateY(-2px);
